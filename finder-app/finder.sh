@@ -7,9 +7,11 @@ then
 
     if [ ! -z "$searchstr" ]
     then
-         cd $filesdir
+         cd $filesdir 
+         
          X=$(find -type f | wc -l )
          Y=$(grep -r $filesdir -e $searchstr | wc -l)
+         
          echo "The number of files are "$X" and the number of matching lines are" $Y
     else
       echo "no second argument found"
